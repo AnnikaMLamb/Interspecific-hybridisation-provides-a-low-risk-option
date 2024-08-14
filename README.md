@@ -4,7 +4,7 @@
 >Data is avaiable in .csv, .fasta, and .txt formats and code is written in R.
 >
 # Data
->Repository contains five phenotypic datasets and one ITS2 metabarcoding dataset
+>Repository contains six phenotypic datasets and one ITS2 metabarcoding dataset
 >
 ## Fertilisation data
 >HybridFieldProject_FertilisationData.csv
@@ -20,7 +20,24 @@
 * Unfertilised: number of the 100 eggs that had not divided
 - Proportion: proportion of divided eggs
 + Percentage: percentage of divided eggs
-## Survival data
+## Pre-deployment survival data
+>HybridFieldExperiment_PreDeployment_Survival.csv
+>
+>Pre-deployment survivorship of hybrid and purebred corals in captivity.
+>
+>Dataset comprised of:
+- UniqueRecruitID: uniquie recruit ID
++ TileID: Unique Tile ID
+* Cross: offspring Group as Acropora sarmentosa purebred (SS), Acropora florida purebred (FF), FS hybrid, or SF hybrid
+- Date: date of sampling
++ RecruitID: recruit number on tile
+- SampleID: unique sample ID
++ Fertilised: number of the 100 eggs that had divided
+* Unfertilised: number of the 100 eggs that had not divided
+- Proportion: proportion of divided eggs
++ Percentage: percentage of divided eggs
+
+## Post-deployment survival data
 ### KM dataset
 >HybridFieldExperiment_Survival_KMDataset.csv
 >
@@ -34,11 +51,11 @@
 + Frame: number of the frame the coral was assigned to
 * RecruitID: recruit number on tile
 - UniqueID: unique recruit ID
-+ Time: time of sampling in months
-* Days: time of sampling in days
-- Date: date of sampling
-+ Deployment: date of deployment
-* Survival: survival where '1' is dead and '2' is alive
++ Location: position on tile
+* ClusterPre: whether the recruit had settled in a cluster ('Y') or alone ('N')
+- Tank: holding tank
++ Survival: survival where '0' is dead and '1' is alive
+* ClusterPost: whether the recruit grew into a cluster ('Y') or alone ('N')
 ### BGLMM dataset
 >HybridFieldExperiment_Survival_BGLMMDataset.csv
 >
@@ -118,7 +135,7 @@
 >
 >Lamb_etal_BioOpen_Code.R
 >
->Requires HybridFieldExperiment_ColourDataset.csv, HybridFieldExperiment_GrowthDataset.csv, HybridFieldExperiment_Survival_BGLMMDataset.csv, HybridFieldExperiment_Survival_KMDataset.csv, and HybridFieldProject_FertilisationData.csv
+>Requires HybridFieldExperiment_ColourDataset.csv, HybridFieldExperiment_GrowthDataset.csv, HybridFieldExperiment_PreDeployment_Survival, HybridFieldExperiment_Survival_BGLMMDataset.csv, HybridFieldExperiment_Survival_KMDataset.csv, and HybridFieldProject_FertilisationData.csv
 >
 ## ITS2 metabarcoding
 >R code for analysing ITS2 metabarcoding data.
